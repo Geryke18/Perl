@@ -79,7 +79,7 @@ sub checkSpaceBeforeBracket {
 			$line =~ s/child\(/child \(/;
 		}else {
 			$errors .= "\tline " . $lineNum . ": RULE 7\n\t\tMaybe here needs a space before the bracket:\t" . $group . "\n\n";
-			$line =~ s/(\w+\()/(\w+\()/;
+			$line =~ s/(\w+\()/(\w+ \()/;
 		}
 		checkSpaceBeforeBracket();
 	}
